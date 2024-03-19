@@ -36,22 +36,60 @@
       </v-card>
     </v-flex>
     <v-flex class="my-1">
+      <!-- Navigation -->
       <v-layout row wrap justify-center>
         <v-flex
           shrink
           v-for="(nav, index) in portfolio.navigation"
           :key="index"
         >
-          <v-btn text small color="primary" class="font-weight-bold body-2">
+          <!-- <v-btn
+            text
+            small
+            color="primary"
+            class="font-weight-bold body-2"
+            @canplay="$scrollTo(`#${nav}`)"
+          >
             {{ nav }}
-          </v-btn>
+          </v-btn> -->
+          <a
+            href="#"
+            v-scroll-to="`#${nav}`"
+            class="font-weight-bold body-2 text-decoration-none body-2 text-uppercas"
+            >{{ nav }}</a
+          >
         </v-flex>
       </v-layout>
     </v-flex>
     <v-flex>
       <v-card outlined>
-        <v-card-text>
-          <h1>Details</h1>
+        <!-- Navigation -->
+        <v-card-text id="Skills">
+          <h1>Skills</h1>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            voluptatem quaerat hic animi, tempore possimus corrupti maiores
+            reiciendis obcaecati, architecto suscipit optio earum repellat,
+            numquam adipisci magnam. Recusandae, enim voluptatem.
+          </div>
+        </v-card-text>
+        <v-card-text id="Experience">
+          <h1>Experience</h1>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            voluptatem quaerat hic animi, tempore possimus corrupti maiores
+            reiciendis obcaecati, architecto suscipit optio earum repellat,
+            numquam adipisci magnam. Recusandae, enim voluptatem.
+          </div>
+        </v-card-text>
+        <v-card-text id="Projects">
+          <h1>Projects</h1>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+            voluptatem quaerat hic animi, tempore possimus corrupti maiores
+            reiciendis obcaecati, architecto suscipit optio earum repellat,
+            numquam adipisci magnam. Recusandae, enim voluptatem.
+          </div>
         </v-card-text>
       </v-card>
     </v-flex>
