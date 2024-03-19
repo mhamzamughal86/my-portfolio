@@ -35,12 +35,18 @@
         </v-card-text>
       </v-card>
     </v-flex>
-    <v-flex>
-      <v-card>
-        <v-card-text>
-          <h1>Navigations</h1>
-        </v-card-text>
-      </v-card>
+    <v-flex class="my-1">
+      <v-layout row wrap justify-center>
+        <v-flex
+          shrink
+          v-for="(nav, index) in portfolio.navigation"
+          :key="index"
+        >
+          <v-btn text small color="primary" class="font-weight-bold body-2">
+            {{ nav }}
+          </v-btn>
+        </v-flex>
+      </v-layout>
     </v-flex>
     <v-flex>
       <v-card>
