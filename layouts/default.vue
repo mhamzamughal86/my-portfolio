@@ -2,8 +2,12 @@
   <v-app>
     <!-- <v-app-bar fixed app height="40"> </v-app-bar> -->
     <v-main>
-      <v-container>
-        <Nuxt />
+      <v-container grid-list-lg class="mt-10">
+        <v-layout row wrap justify-center>
+          <v-flex sm12 lg10 xl7>
+            <Nuxt />
+          </v-flex>
+        </v-layout>
       </v-container>
     </v-main>
 
