@@ -9,8 +9,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - my-portfolio',
-    title: 'my-portfolio',
+    titleTemplate: '%s - Portfolio',
+    title: 'Muhammad Hamza Saeed',
     htmlAttrs: {
       lang: 'en',
     },
@@ -42,6 +42,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/moment',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

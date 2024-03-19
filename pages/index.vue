@@ -1,7 +1,7 @@
 <template>
   <v-layout column>
     <v-flex>
-      <v-card>
+      <v-card outlined>
         <v-card-text class="pa-8">
           <v-layout row wrap justify-center>
             <v-flex sm12 lg2 class="d-flex align-center">
@@ -20,7 +20,7 @@
                   v-for="(skill, index) in portfolio.skills"
                   :key="index"
                 >
-                  <v-chip :key="index" small>
+                  <v-chip :key="index" small class="secondary">
                     {{ skill }}
                   </v-chip>
                 </v-flex>
@@ -49,7 +49,7 @@
       </v-layout>
     </v-flex>
     <v-flex>
-      <v-card>
+      <v-card outlined>
         <v-card-text>
           <h1>Details</h1>
         </v-card-text>

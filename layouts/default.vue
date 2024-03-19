@@ -11,14 +11,18 @@
       </v-container>
     </v-main>
 
-    <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+    <v-footer app elevation="8">
+      <v-container grid-list-lg class="pa-0">
+        <app-footer />
+      </v-container>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import AppFooter from '~/components/appFooter.vue'
 export default {
+  components: { AppFooter },
   name: 'DefaultLayout',
   data() {
     return {
