@@ -16,15 +16,8 @@
           <v-flex sm12 lg10 xl7>
             <profile :extend="true">
               <template v-slot:extension>
-                <v-layout
-                  v-if="$vuetify.breakpoint.mdAndUp"
-                  row
-                  wrap
-                  justify-center
-                >
-                  <v-flex shrink> Links </v-flex>
-                </v-layout>
-                <v-icon v-else color="">mdi-menu</v-icon>
+                <navigation :menu="$vuetify.breakpoint.smAndDown" />
+                <!-- <v-icon v-else color="">mdi-menu</v-icon> -->
               </template>
             </profile>
           </v-flex>
@@ -32,7 +25,11 @@
       </v-container>
     </v-app-bar>
     <v-main>
-      <v-container grid-list-lg class="mt-4">
+      <v-container
+        grid-list-lg
+        class="mt-4"
+        :class="$vuetify.breakpoint.smAndDown ? 'px-8' : ''"
+      >
         <v-layout row wrap justify-center>
           <v-flex sm12 lg10 xl7>
             <Nuxt :scrollHeight="scrollHeight" />
@@ -51,10 +48,11 @@
 
 <script>
 import AppFooter from '~/components/appFooter.vue'
+import Navigation from '~/components/navigation.vue'
 import Profile from '~/components/profile.vue'
 
 export default {
-  components: { AppFooter, Profile },
+  components: { AppFooter, Profile, Navigation },
   name: 'DefaultLayout',
   data: () => ({
     scrollHeight: 100,

@@ -49,7 +49,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ['vue-scrollto/nuxt', { duration: 700 }],
+    ['vue-scrollto/nuxt', { duration: 1000, offset: -140 }],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
